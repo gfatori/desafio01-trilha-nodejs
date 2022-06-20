@@ -128,7 +128,6 @@ app.delete(
   checkExistsTodo,
   (request, response) => {
     const { user } = request
-    const { id } = request.params
 
     user.todos.splice(user, 1)
 
