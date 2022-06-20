@@ -123,7 +123,6 @@ app.delete('/todos/:id', checksExistsUserAccount, checkExistsTodo, (request, res
   const { user } = request;
   const { id } = request.params;
 
-  const checkTodoExists = user.todos.find(todo => todo.id === id)
   user.todos.splice(user, 1);
 
   return response.status(204).send();
